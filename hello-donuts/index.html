@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="ro">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Hello Donuts · Demo site</title>
+<meta name="description" content="Cafea bună, prăjituri de casă și un colț liniștit.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:wght@400;600;700&family=DM+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root { --fundal:#f4ede4; --text:#3a2a20; --accent:#8a5a3b; --accent2:#5b7553;
+        --card:rgba(0,0,0,.04); --linie:rgba(0,0,0,.12); --pe-accent:#ffffff; --titlu:'DM Serif Display', serif; --corp:'DM Sans', sans-serif; }
+* { box-sizing:border-box; margin:0; padding:0 }
+html { scroll-behavior:smooth }
+body { background:var(--fundal); color:var(--text); font:17px/1.65 var(--corp); }
+a { color:inherit }
+.demo { background:var(--accent); color:var(--pe-accent); text-align:center; font:600 13px/1.4 var(--corp); padding:8px 16px; }
+.demo a { text-decoration:underline }
+nav { display:flex; justify-content:space-between; align-items:center; max-width:1100px; margin:auto; padding:22px 20px; }
+.logo { font:700 22px var(--titlu); letter-spacing:.02em; display:flex; gap:10px; align-items:center; text-decoration:none }
+.logo i { width:38px; height:38px; border-radius:50%; background:var(--accent); color:var(--pe-accent); display:grid; place-items:center; font-style:normal }
+nav ul { display:flex; gap:26px; list-style:none; font-size:15px }
+nav ul a { text-decoration:none; opacity:.8 } nav ul a:hover { opacity:1; color:var(--accent) }
+.hero { max-width:1100px; margin:auto; padding:70px 20px 90px; display:grid; grid-template-columns:1.3fr 1fr; gap:50px; align-items:center }
+.hero small { text-transform:uppercase; letter-spacing:.2em; font-size:13px; color:var(--accent); font-weight:700 }
+.hero h1 { font:700 clamp(46px,8vw,92px)/1 var(--titlu); margin:14px 0 22px }
+.hero p { font-size:20px; opacity:.85; max-width:30ch }
+.butoane { display:flex; gap:14px; margin-top:34px; flex-wrap:wrap }
+.btn { padding:15px 26px; border-radius:999px; font-weight:700; text-decoration:none; border:2px solid var(--accent); transition:transform .2s }
+.btn:hover { transform:translateY(-2px) }
+.btn.plin { background:var(--accent); color:var(--pe-accent) }
+.farfurie { aspect-ratio:1; border-radius:50%; display:grid; place-items:center; font-size:clamp(90px,16vw,170px);
+            background:radial-gradient(circle at 35% 30%, var(--card), transparent 60%), var(--card);
+            border:1px solid var(--linie); box-shadow:inset 0 0 0 18px var(--fundal), inset 0 0 0 19px var(--linie) }
+section { max-width:1100px; margin:auto; padding:80px 20px; border-top:1px solid var(--linie) }
+h2 { font:700 clamp(34px,5vw,52px)/1.1 var(--titlu); margin-bottom:26px }
+.despre { display:grid; grid-template-columns:1fr 1fr; gap:50px }
+.despre p { font-size:19px }
+.cifre { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; align-self:start }
+.cifre div { background:var(--card); border:1px solid var(--linie); border-radius:18px; padding:22px; text-align:center }
+.cifre b { display:block; font:700 34px var(--titlu); color:var(--accent) }
+.meniu { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:40px }
+.categorie h3 { font:700 24px var(--titlu); color:var(--accent); margin-bottom:12px; padding-bottom:8px; border-bottom:2px solid var(--accent) }
+.fel { display:flex; justify-content:space-between; gap:16px; padding:12px 0; border-bottom:1px dashed var(--linie) }
+.fel span { display:block; font-size:14px; opacity:.7 }
+.fel b { white-space:nowrap; color:var(--accent2) }
+.nota { margin-top:26px; font-size:14px; opacity:.65; font-style:italic }
+.vizita { display:grid; grid-template-columns:1fr 1.3fr; gap:40px }
+.program { list-style:none }
+.program li { display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid var(--linie) }
+.contact p { margin:14px 0 }
+.contact .social a { margin-right:16px; color:var(--accent); font-weight:600 }
+iframe { width:100%; height:100%; min-height:340px; border:0; border-radius:20px; filter:none }
+footer { text-align:center; padding:40px 20px; font-size:14px; opacity:.6; border-top:1px solid var(--linie) }
+.suna { display:none }
+@media (max-width:760px) {
+  nav ul { display:none }
+  .hero, .despre, .vizita { grid-template-columns:1fr }
+  .hero { padding-top:30px } .farfurie { width:240px; margin:auto; font-size:100px }
+  .cifre div { padding:16px 8px; font-size:14px }
+  .suna { display:block; position:fixed; bottom:16px; left:16px; right:16px; text-align:center; z-index:9; box-shadow:0 10px 30px rgba(0,0,0,.25) }
+  footer { padding-bottom:100px }
+}
+</style>
+</head>
+<body>
+<div class="demo">Demo: propunere de site pentru Hello Donuts, realizată de Garconița Vlad. Nu este site-ul oficial. · <a href="mailto:garconitav@gmail.com">garconitav@gmail.com</a></div>
+
+<nav>
+  <a class="logo" href="#"><i>H</i>Hello Donuts</a>
+  <ul><li><a href="#despre">Despre</a></li><li><a href="#meniu">Meniu</a></li><li><a href="#vizita">Vizită</a></li></ul>
+</nav>
+
+<header class="hero">
+  <div>
+    <small>Strada Liviu Rebreanu 4</small>
+    <h1>Hello Donuts</h1>
+    <p>Cafea bună, prăjituri de casă și un colț liniștit.</p>
+    <div class="butoane">
+      <a class="btn plin" href="tel:+40760165276">Sună: +40 760 165 276</a>
+      <a class="btn" href="#meniu">Vezi meniul</a>
+    </div>
+  </div>
+  <div class="farfurie" aria-hidden="true">☕</div>
+</header>
+
+<section id="despre" class="despre">
+  <div><h2>Despre noi</h2><p>Hello Donuts e locul tău de oprit din fugă: cafea de specialitate, prăjituri făcute în casă și mic-dejun servit toată ziua.</p></div>
+  <div class="cifre">
+    <div><b>🍽️</b>gătit în casă</div><div><b>📞</b>rezervări la telefon</div><div><b>♥</b>din București</div>
+  </div>
+</section>
+
+<section id="meniu">
+  <h2>Meniu</h2>
+  <div class="meniu"><div class="categorie"><h3>Cafea</h3><div class="fel"><div><strong>Espresso</strong><span></span></div><b>10 lei</b></div><div class="fel"><div><strong>Flat white</strong><span></span></div><b>16 lei</b></div><div class="fel"><div><strong>Latte</strong><span></span></div><b>17 lei</b></div></div><div class="categorie"><h3>Dulce</h3><div class="fel"><div><strong>Cheesecake</strong><span>cu fructe de pădure</span></div><b>22 lei</b></div><div class="fel"><div><strong>Croissant</strong><span>cu unt</span></div><b>12 lei</b></div></div><div class="categorie"><h3>Mic-dejun</h3><div class="fel"><div><strong>Avocado toast</strong><span>ou poșat, chili</span></div><b>32 lei</b></div></div></div>
+  <p class="nota">Meniu de exemplu. Pe site-ul final apar preparatele și prețurile voastre, ușor de schimbat oricând.</p>
+</section>
+
+<section id="vizita" class="vizita">
+  <div class="contact">
+    <h2>Vino la noi</h2>
+    <ul class="program"><li><span>Luni – Duminică</span><span>10:00 – 22:00</span></li></ul>
+    <p>📍 <a href="https://www.google.com/maps/search/?api=1&query=Hello+Donuts+Strada+Liviu+Rebreanu+4,+București">Strada Liviu Rebreanu 4, București</a></p>
+    <p>📞 <a href="tel:+40760165276">+40 760 165 276</a></p>
+    <p class="social"></p>
+  </div>
+  <div><iframe title="Hartă" loading="lazy" src="https://www.openstreetmap.org/export/embed.html?bbox=26.1460983%2C44.4181735%2C26.1540983%2C44.4231735&amp;layer=mapnik&amp;marker=44.4206735%2C26.1500983"></iframe></div>
+</section>
+
+<footer>© Hello Donuts · București</footer>
+<a class="btn plin suna" href="tel:+40760165276">📞 Sună acum</a>
+</body>
+</html>
