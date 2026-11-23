@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
 <title>Taj · Demo site</title>
-<meta name="description" content="Carne la grătar, pâine caldă și sosuri ca în Orient.">
+<meta name="description" content="Curry gătit încet, naan din tandoor și condimente adevărate.">
 <script>document.documentElement.classList.add('js')</script>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Gloock&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
@@ -91,6 +91,11 @@ h2 { font:var(--gt) clamp(36px,4.5vw,48px)/1.1 var(--titlu); letter-spacing:-.01
        }
 .nota { font-size:14px; color:var(--text3); margin-top:24px }
 
+.stiut { margin-top:40px }
+.stiut h3 { font-size:14px; font-weight:600; color:var(--accent); margin-bottom:12px }
+.stiut ul { display:flex; flex-wrap:wrap; gap:8px 24px }
+.stiut li { display:flex; align-items:center; gap:8px; color:var(--text2) }
+.stiut .ic { width:16px; height:16px; color:var(--accent) }
 .despre { display:grid; grid-template-columns:1fr 1.6fr; gap:64px }
 .despre p.mare { font:var(--gt) clamp(24px,2.6vw,31px)/1.42 var(--titlu); color:var(--text); max-width:32em; text-wrap:pretty }
 
@@ -178,9 +183,9 @@ footer { display:flex; justify-content:space-between; gap:16px; padding:32px 0 4
 
 <header class="hero">
   <div class="intra">
-    <p class="unde">Bucătărie orientală · București</p>
+    <p class="unde">Bucătărie indiană · Centrul Civic</p>
     <h1>Taj</h1>
-    <p class="slogan">Carne la grătar, pâine caldă și sosuri ca în Orient.</p>
+    <p class="slogan">Curry gătit încet, naan din tandoor și condimente adevărate.</p>
     <div class="butoane"><a class="btn plin" href="tel:+40748133300"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>Sună: +40748133300</a><a class="btn text" href="#meniu">Vezi meniul <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a></div>
   </div>
   <div class="card-zona">
@@ -188,7 +193,7 @@ footer { display:flex; justify-content:space-between; gap:16px; padding:32px 0 4
       <div class="spate" aria-hidden="true"></div>
       <div class="card">
         <div class="sus"><b>Meniu</b><span>Taj</span></div>
-        <ul><li class="fel"><div class="rand"><span class="n">Shaorma clasică</span><span class="puncte" aria-hidden="true"></span><span class="pret">28</span></div></li><li class="fel"><div class="rand"><span class="n">Hummus</span><span class="puncte" aria-hidden="true"></span><span class="pret">22</span></div></li><li class="fel"><div class="rand"><span class="n">Baklava</span><span class="puncte" aria-hidden="true"></span><span class="pret">18</span></div></li><li class="fel"><div class="rand"><span class="n">Iskender kebab</span><span class="puncte" aria-hidden="true"></span><span class="pret">52</span></div></li><li class="fel"><div class="rand"><span class="n">Falafel</span><span class="puncte" aria-hidden="true"></span><span class="pret">26</span></div></li></ul>
+        <ul><li class="fel"><div class="rand"><span class="n">Butter chicken</span><span class="puncte" aria-hidden="true"></span><span class="pret">48</span></div></li><li class="fel"><div class="rand"><span class="n">Tandoori chicken</span><span class="puncte" aria-hidden="true"></span><span class="pret">52</span></div></li><li class="fel"><div class="rand"><span class="n">Samosa</span><span class="puncte" aria-hidden="true"></span><span class="pret">22</span></div></li><li class="fel"><div class="rand"><span class="n">Chicken tikka masala</span><span class="puncte" aria-hidden="true"></span><span class="pret">48</span></div></li><li class="fel"><div class="rand"><span class="n">Naan cu usturoi</span><span class="puncte" aria-hidden="true"></span><span class="pret">12</span></div></li></ul>
         <p class="jos">Prețuri în lei</p>
         <svg class="stampila" viewBox="0 0 120 120" aria-hidden="true"><defs><path id="cerc" d="M60 60 m-41 0 a41 41 0 1 1 82 0 a41 41 0 1 1 -82 0"/></defs><circle cx="60" cy="60" r="56" fill="none" stroke="currentColor" stroke-width="2.5"/><circle cx="60" cy="60" r="31" fill="none" stroke="currentColor" stroke-width="1"/><text class="st-cerc"><textPath href="#cerc" textLength="250" lengthAdjust="spacing">TAJ · BUCUREȘTI ·</textPath></text><text x="60" y="71" text-anchor="middle" class="st-mare">T</text></svg>
       </div>
@@ -205,7 +210,8 @@ footer { display:flex; justify-content:space-between; gap:16px; padding:32px 0 4
 <section id="despre"><div class="wrap despre apare">
   <h2>Despre noi</h2>
   <div>
-    <p class="mare">Taj e locul unde carnea se frige pe cărbuni, pâinea iese caldă din cuptor și sosurile se fac în fiecare dimineață. Porții generoase, gust adevărat.</p>
+    <p class="mare">Taj e locul unde carnea se frige pe cărbuni, pâinea iese caldă din cuptor și sosurile se fac în fiecare dimineață. Porții generoase, gust adevărat. Ne găsești pe Calea 13 Septembrie, în zona Centrul Civic.</p>
+    <div class="stiut"><h3>Bine de știut</h3><ul><li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Opțiuni vegetariene</li><li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Opțiuni vegane</li></ul></div>
     <p class="nota">Text de exemplu. Pe site-ul final îl scriem împreună, cu povestea voastră.</p>
   </div>
 </div></section>
@@ -214,7 +220,7 @@ footer { display:flex; justify-content:space-between; gap:16px; padding:32px 0 4
   <div class="pagina-meniu apare">
     <div class="pm-cap"><span class="orn"></span><h2>Meniu</h2><span class="orn"></span></div>
     <p class="pm-sub">Taj · prețuri în lei</p>
-    <div class="meniu"><div class="categorie"><h3>Specialități</h3><ul><li class="fel"><div class="rand"><span class="n">Shaorma clasică</span><span class="puncte" aria-hidden="true"></span><span class="pret">28</span></div><span class="desc">pui, cartofi, sos de usturoi</span></li><li class="fel"><div class="rand"><span class="n">Iskender kebab</span><span class="puncte" aria-hidden="true"></span><span class="pret">52</span></div><span class="desc">vită, iaurt, sos de roșii, unt</span></li></ul></div><div class="categorie"><h3>Mezze</h3><ul><li class="fel"><div class="rand"><span class="n">Hummus</span><span class="puncte" aria-hidden="true"></span><span class="pret">22</span></div><span class="desc">năut, tahini, ulei de măsline</span></li><li class="fel"><div class="rand"><span class="n">Falafel</span><span class="puncte" aria-hidden="true"></span><span class="pret">26</span></div><span class="desc">6 bucăți, sos tahini</span></li></ul></div><div class="categorie"><h3>Desert</h3><ul><li class="fel"><div class="rand"><span class="n">Baklava</span><span class="puncte" aria-hidden="true"></span><span class="pret">18</span></div><span class="desc">fistic, sirop de miere</span></li></ul></div></div>
+    <div class="meniu"><div class="categorie"><h3>Curry</h3><ul><li class="fel"><div class="rand"><span class="n">Butter chicken</span><span class="puncte" aria-hidden="true"></span><span class="pret">48</span></div><span class="desc">sos de roșii, unt, smântână</span></li><li class="fel"><div class="rand"><span class="n">Chicken tikka masala</span><span class="puncte" aria-hidden="true"></span><span class="pret">48</span></div><span class="desc">pui marinat, sos picant</span></li><li class="fel"><div class="rand"><span class="n">Dal makhani</span><span class="puncte" aria-hidden="true"></span><span class="pret">36</span></div><span class="desc">linte neagră, vegetarian</span></li></ul></div><div class="categorie"><h3>Din tandoor</h3><ul><li class="fel"><div class="rand"><span class="n">Tandoori chicken</span><span class="puncte" aria-hidden="true"></span><span class="pret">52</span></div><span class="desc">marinat în iaurt și condimente</span></li><li class="fel"><div class="rand"><span class="n">Naan cu usturoi</span><span class="puncte" aria-hidden="true"></span><span class="pret">12</span></div><span class="desc">copt în tandoor</span></li></ul></div><div class="categorie"><h3>Pe lângă</h3><ul><li class="fel"><div class="rand"><span class="n">Samosa</span><span class="puncte" aria-hidden="true"></span><span class="pret">22</span></div><span class="desc">2 bucăți, cartofi și mazăre</span></li><li class="fel"><div class="rand"><span class="n">Lassi cu mango</span><span class="puncte" aria-hidden="true"></span><span class="pret">16</span></div><span class="desc">iaurt, mango</span></li></ul></div></div>
   </div>
   <p class="nota">Meniu de exemplu. Pe site-ul final apar preparatele și prețurile voastre, ușor de schimbat oricând.</p>
 </div></section>

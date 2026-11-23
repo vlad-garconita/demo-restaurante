@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
 <title>Terasa Obor 2 · Demo site</title>
-<meta name="description" content="Burgeri suculenți, cartofi crocanți și bere rece.">
+<meta name="description" content="Carne la grătar pe cărbuni, mici și bere rece.">
 <script>document.documentElement.classList.add('js')</script>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
@@ -91,6 +91,11 @@ h2 { font:var(--gt) clamp(36px,4.5vw,48px)/1.1 var(--titlu); letter-spacing:-.01
       text-transform:uppercase; letter-spacing:.01em; font-size:clamp(44px,5.5vw,64px); }
 .nota { font-size:14px; color:var(--text3); margin-top:24px }
 
+.stiut { margin-top:40px }
+.stiut h3 { font-size:14px; font-weight:600; color:var(--accent); margin-bottom:12px }
+.stiut ul { display:flex; flex-wrap:wrap; gap:8px 24px }
+.stiut li { display:flex; align-items:center; gap:8px; color:var(--text2) }
+.stiut .ic { width:16px; height:16px; color:var(--accent) }
 .despre { display:grid; grid-template-columns:1fr 1.6fr; gap:64px }
 .despre p.mare { font:400 22px/1.6 var(--corp); color:var(--text); max-width:32em; text-wrap:pretty }
 
@@ -178,9 +183,9 @@ footer { display:flex; justify-content:space-between; gap:16px; padding:32px 0 4
 
 <header class="hero">
   <div class="intra">
-    <p class="unde">Burgeri și grătar · București</p>
+    <p class="unde">Grătar · Obor</p>
     <h1>Terasa Obor 2</h1>
-    <p class="slogan">Burgeri suculenți, cartofi crocanți și bere rece.</p>
+    <p class="slogan">Carne la grătar pe cărbuni, mici și bere rece.</p>
     <div class="butoane"><a class="btn plin" href="tel:+40722456383"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>Sună: +40722456383</a><a class="btn text" href="#meniu">Vezi meniul <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a></div>
   </div>
   <div class="card-zona">
@@ -188,7 +193,7 @@ footer { display:flex; justify-content:space-between; gap:16px; padding:32px 0 4
       <div class="spate" aria-hidden="true"></div>
       <div class="card">
         <div class="sus"><b>Meniu</b><span>Terasa Obor 2</span></div>
-        <ul><li class="fel"><div class="rand"><span class="n">Classic</span><span class="puncte" aria-hidden="true"></span><span class="pret">42</span></div></li><li class="fel"><div class="rand"><span class="n">Cartofi prăjiți</span><span class="puncte" aria-hidden="true"></span><span class="pret">16</span></div></li><li class="fel"><div class="rand"><span class="n">Bere la halbă</span><span class="puncte" aria-hidden="true"></span><span class="pret">15</span></div></li><li class="fel"><div class="rand"><span class="n">Smoky BBQ</span><span class="puncte" aria-hidden="true"></span><span class="pret">48</span></div></li><li class="fel"><div class="rand"><span class="n">Onion rings</span><span class="puncte" aria-hidden="true"></span><span class="pret">18</span></div></li></ul>
+        <ul><li class="fel"><div class="rand"><span class="n">Mici</span><span class="puncte" aria-hidden="true"></span><span class="pret">30</span></div></li><li class="fel"><div class="rand"><span class="n">Ceafă de porc</span><span class="puncte" aria-hidden="true"></span><span class="pret">42</span></div></li><li class="fel"><div class="rand"><span class="n">Coaste BBQ</span><span class="puncte" aria-hidden="true"></span><span class="pret">58</span></div></li></ul>
         <p class="jos">Prețuri în lei</p>
         <svg class="stampila" viewBox="0 0 120 120" aria-hidden="true"><defs><path id="cerc" d="M60 60 m-41 0 a41 41 0 1 1 82 0 a41 41 0 1 1 -82 0"/></defs><circle cx="60" cy="60" r="56" fill="none" stroke="currentColor" stroke-width="2.5"/><circle cx="60" cy="60" r="31" fill="none" stroke="currentColor" stroke-width="1"/><text class="st-cerc"><textPath href="#cerc" textLength="250" lengthAdjust="spacing">TERASA OBOR 2 · BUCUREȘTI ·</textPath></text><text x="60" y="71" text-anchor="middle" class="st-mare">T</text></svg>
       </div>
@@ -205,7 +210,8 @@ footer { display:flex; justify-content:space-between; gap:16px; padding:32px 0 4
 <section id="despre"><div class="wrap despre apare">
   <h2>Despre noi</h2>
   <div>
-    <p class="mare">La Terasa Obor 2 carnea e tocată în fiecare zi, chiflele sunt proaspete, iar cartofii se prăjesc de două ori. Simplu, gustos și fără grabă.</p>
+    <p class="mare">La Terasa Obor 2 carnea e tocată în fiecare zi, chiflele sunt proaspete, iar cartofii se prăjesc de două ori. Simplu, gustos și fără grabă. Ne găsești pe Strada Ziduri Moși, în zona Obor.</p>
+    
     <p class="nota">Text de exemplu. Pe site-ul final îl scriem împreună, cu povestea voastră.</p>
   </div>
 </div></section>
@@ -214,7 +220,7 @@ footer { display:flex; justify-content:space-between; gap:16px; padding:32px 0 4
   <div class="pagina-meniu apare">
     <div class="pm-cap"><span class="orn"></span><h2>Meniu</h2><span class="orn"></span></div>
     <p class="pm-sub">Terasa Obor 2 · prețuri în lei</p>
-    <div class="meniu"><div class="categorie"><h3>Burgeri</h3><ul><li class="fel"><div class="rand"><span class="n">Classic</span><span class="puncte" aria-hidden="true"></span><span class="pret">42</span></div><span class="desc">vită 180g, cheddar, castraveți murați</span></li><li class="fel"><div class="rand"><span class="n">Smoky BBQ</span><span class="puncte" aria-hidden="true"></span><span class="pret">48</span></div><span class="desc">bacon, ceapă caramelizată, sos BBQ</span></li></ul></div><div class="categorie"><h3>Pe lângă</h3><ul><li class="fel"><div class="rand"><span class="n">Cartofi prăjiți</span><span class="puncte" aria-hidden="true"></span><span class="pret">16</span></div><span class="desc">sare de mare, rozmarin</span></li><li class="fel"><div class="rand"><span class="n">Onion rings</span><span class="puncte" aria-hidden="true"></span><span class="pret">18</span></div><span class="desc">sos de maioneză cu usturoi</span></li></ul></div><div class="categorie"><h3>De băut</h3><ul><li class="fel"><div class="rand"><span class="n">Bere la halbă</span><span class="puncte" aria-hidden="true"></span><span class="pret">15</span></div><span class="desc">0,5 l</span></li></ul></div></div>
+    <div class="meniu"><div class="categorie"><h3>La grătar</h3><ul><li class="fel"><div class="rand"><span class="n">Mici</span><span class="puncte" aria-hidden="true"></span><span class="pret">30</span></div><span class="desc">5 bucăți, muștar, pâine</span></li><li class="fel"><div class="rand"><span class="n">Ceafă de porc</span><span class="puncte" aria-hidden="true"></span><span class="pret">42</span></div><span class="desc">cartofi țărănești</span></li><li class="fel"><div class="rand"><span class="n">Coaste BBQ</span><span class="puncte" aria-hidden="true"></span><span class="pret">58</span></div><span class="desc">glazurate, coleslaw</span></li></ul></div></div>
   </div>
   <p class="nota">Meniu de exemplu. Pe site-ul final apar preparatele și prețurile voastre, ușor de schimbat oricând.</p>
 </div></section>

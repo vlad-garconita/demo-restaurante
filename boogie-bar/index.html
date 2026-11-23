@@ -91,6 +91,11 @@ h2 { font:var(--gt) clamp(36px,4.5vw,48px)/1.1 var(--titlu); letter-spacing:-.01
        }
 .nota { font-size:14px; color:var(--text3); margin-top:24px }
 
+.stiut { margin-top:40px }
+.stiut h3 { font-size:14px; font-weight:600; color:var(--accent); margin-bottom:12px }
+.stiut ul { display:flex; flex-wrap:wrap; gap:8px 24px }
+.stiut li { display:flex; align-items:center; gap:8px; color:var(--text2) }
+.stiut .ic { width:16px; height:16px; color:var(--accent) }
 .despre { display:grid; grid-template-columns:1fr 1.6fr; gap:64px }
 .despre p.mare { font:var(--gt) clamp(24px,2.6vw,31px)/1.42 var(--titlu); color:var(--text); max-width:32em; text-wrap:pretty }
 
@@ -178,7 +183,7 @@ footer { display:flex; justify-content:space-between; gap:16px; padding:32px 0 4
 
 <header class="hero">
   <div class="intra">
-    <p class="unde">Bar · București</p>
+    <p class="unde">Bar · Cartierul Armenesc</p>
     <h1>Boogie Bar</h1>
     <p class="slogan">Bere rece, cocktailuri bune și muzică până târziu.</p>
     <div class="butoane"><a class="btn plin" href="#meniu">Vezi meniul</a><a class="btn text" href="#vizita">Cum ajungi <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a></div>
@@ -188,7 +193,7 @@ footer { display:flex; justify-content:space-between; gap:16px; padding:32px 0 4
       <div class="spate" aria-hidden="true"></div>
       <div class="card">
         <div class="sus"><b>Meniu</b><span>Boogie Bar</span></div>
-        <ul><li class="fel"><div class="rand"><span class="n">Lager la draft</span><span class="puncte" aria-hidden="true"></span><span class="pret">16</span></div></li><li class="fel"><div class="rand"><span class="n">Negroni</span><span class="puncte" aria-hidden="true"></span><span class="pret">36</span></div></li><li class="fel"><div class="rand"><span class="n">Platou de brânzeturi</span><span class="puncte" aria-hidden="true"></span><span class="pret">58</span></div></li><li class="fel"><div class="rand"><span class="n">IPA</span><span class="puncte" aria-hidden="true"></span><span class="pret">22</span></div></li><li class="fel"><div class="rand"><span class="n">Aperol spritz</span><span class="puncte" aria-hidden="true"></span><span class="pret">32</span></div></li></ul>
+        <ul><li class="fel"><div class="rand"><span class="n">Lager la draft</span><span class="puncte" aria-hidden="true"></span><span class="pret">16</span></div></li><li class="fel"><div class="rand"><span class="n">Classic</span><span class="puncte" aria-hidden="true"></span><span class="pret">42</span></div></li><li class="fel"><div class="rand"><span class="n">Espresso</span><span class="puncte" aria-hidden="true"></span><span class="pret">10</span></div></li><li class="fel"><div class="rand"><span class="n">Margherita</span><span class="puncte" aria-hidden="true"></span><span class="pret">38</span></div></li><li class="fel"><div class="rand"><span class="n">IPA</span><span class="puncte" aria-hidden="true"></span><span class="pret">22</span></div></li></ul>
         <p class="jos">Prețuri în lei</p>
         <svg class="stampila" viewBox="0 0 120 120" aria-hidden="true"><defs><path id="cerc" d="M60 60 m-41 0 a41 41 0 1 1 82 0 a41 41 0 1 1 -82 0"/></defs><circle cx="60" cy="60" r="56" fill="none" stroke="currentColor" stroke-width="2.5"/><circle cx="60" cy="60" r="31" fill="none" stroke="currentColor" stroke-width="1"/><text class="st-cerc"><textPath href="#cerc" textLength="250" lengthAdjust="spacing">BOOGIE BAR · BUCUREȘTI ·</textPath></text><text x="60" y="71" text-anchor="middle" class="st-mare">B</text></svg>
       </div>
@@ -205,7 +210,8 @@ footer { display:flex; justify-content:space-between; gap:16px; padding:32px 0 4
 <section id="despre"><div class="wrap despre apare">
   <h2>Despre noi</h2>
   <div>
-    <p class="mare">Boogie Bar e locul unde vii după muncă și rămâi mai mult decât ai plănuit. Bere la draft, cocktailuri făcute ca lumea și ceva bun de ronțăit lângă.</p>
+    <p class="mare">Boogie Bar e locul unde vii după muncă și rămâi mai mult decât ai plănuit. Bere la draft, cocktailuri făcute ca lumea și ceva bun de ronțăit lângă. Ne găsești pe Strada Popa Petre, în zona Cartierul Armenesc.</p>
+    
     <p class="nota">Text de exemplu. Pe site-ul final îl scriem împreună, cu povestea voastră.</p>
   </div>
 </div></section>
@@ -214,7 +220,7 @@ footer { display:flex; justify-content:space-between; gap:16px; padding:32px 0 4
   <div class="pagina-meniu apare">
     <div class="pm-cap"><span class="orn"></span><h2>Meniu</h2><span class="orn"></span></div>
     <p class="pm-sub">Boogie Bar · prețuri în lei</p>
-    <div class="meniu"><div class="categorie"><h3>Bere</h3><ul><li class="fel"><div class="rand"><span class="n">Lager la draft</span><span class="puncte" aria-hidden="true"></span><span class="pret">16</span></div><span class="desc">0,5 l</span></li><li class="fel"><div class="rand"><span class="n">IPA</span><span class="puncte" aria-hidden="true"></span><span class="pret">22</span></div><span class="desc">0,33 l, berărie locală</span></li></ul></div><div class="categorie"><h3>Cocktailuri</h3><ul><li class="fel"><div class="rand"><span class="n">Negroni</span><span class="puncte" aria-hidden="true"></span><span class="pret">36</span></div><span class="desc">gin, vermut, Campari</span></li><li class="fel"><div class="rand"><span class="n">Aperol spritz</span><span class="puncte" aria-hidden="true"></span><span class="pret">32</span></div><span class="desc">prosecco, sifon, portocală</span></li></ul></div><div class="categorie"><h3>De ronțăit</h3><ul><li class="fel"><div class="rand"><span class="n">Platou de brânzeturi</span><span class="puncte" aria-hidden="true"></span><span class="pret">58</span></div><span class="desc">pentru 2, nuci, miere</span></li><li class="fel"><div class="rand"><span class="n">Nachos</span><span class="puncte" aria-hidden="true"></span><span class="pret">28</span></div><span class="desc">cheddar, jalapeño, salsa</span></li></ul></div></div>
+    <div class="meniu"><div class="categorie"><h3>Bere</h3><ul><li class="fel"><div class="rand"><span class="n">Lager la draft</span><span class="puncte" aria-hidden="true"></span><span class="pret">16</span></div><span class="desc">0,5 l</span></li><li class="fel"><div class="rand"><span class="n">IPA</span><span class="puncte" aria-hidden="true"></span><span class="pret">22</span></div><span class="desc">0,33 l, berărie locală</span></li></ul></div><div class="categorie"><h3>Burgeri</h3><ul><li class="fel"><div class="rand"><span class="n">Classic</span><span class="puncte" aria-hidden="true"></span><span class="pret">42</span></div><span class="desc">vită 180g, cheddar, castraveți murați</span></li><li class="fel"><div class="rand"><span class="n">Smoky BBQ</span><span class="puncte" aria-hidden="true"></span><span class="pret">48</span></div><span class="desc">bacon, ceapă caramelizată, sos BBQ</span></li><li class="fel"><div class="rand"><span class="n">Chicken burger</span><span class="puncte" aria-hidden="true"></span><span class="pret">39</span></div><span class="desc">pui crocant, salată, maioneză</span></li></ul></div><div class="categorie"><h3>Cafea</h3><ul><li class="fel"><div class="rand"><span class="n">Espresso</span><span class="puncte" aria-hidden="true"></span><span class="pret">10</span></div></li><li class="fel"><div class="rand"><span class="n">Flat white</span><span class="puncte" aria-hidden="true"></span><span class="pret">16</span></div></li><li class="fel"><div class="rand"><span class="n">Latte</span><span class="puncte" aria-hidden="true"></span><span class="pret">17</span></div></li></ul></div><div class="categorie"><h3>Pizza</h3><ul><li class="fel"><div class="rand"><span class="n">Margherita</span><span class="puncte" aria-hidden="true"></span><span class="pret">38</span></div><span class="desc">sos de roșii, mozzarella, busuioc</span></li><li class="fel"><div class="rand"><span class="n">Diavola</span><span class="puncte" aria-hidden="true"></span><span class="pret">45</span></div><span class="desc">salam picant, mozzarella, ardei iute</span></li><li class="fel"><div class="rand"><span class="n">Quattro formaggi</span><span class="puncte" aria-hidden="true"></span><span class="pret">46</span></div><span class="desc">patru brânzeturi</span></li></ul></div></div>
   </div>
   <p class="nota">Meniu de exemplu. Pe site-ul final apar preparatele și prețurile voastre, ușor de schimbat oricând.</p>
 </div></section>

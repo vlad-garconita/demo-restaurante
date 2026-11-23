@@ -91,6 +91,11 @@ h2 { font:var(--gt) clamp(36px,4.5vw,48px)/1.1 var(--titlu); letter-spacing:-.01
        }
 .nota { font-size:14px; color:var(--text3); margin-top:24px }
 
+.stiut { margin-top:40px }
+.stiut h3 { font-size:14px; font-weight:600; color:var(--accent); margin-bottom:12px }
+.stiut ul { display:flex; flex-wrap:wrap; gap:8px 24px }
+.stiut li { display:flex; align-items:center; gap:8px; color:var(--text2) }
+.stiut .ic { width:16px; height:16px; color:var(--accent) }
 .despre { display:grid; grid-template-columns:1fr 1.6fr; gap:64px }
 .despre p.mare { font:var(--gt) clamp(24px,2.6vw,31px)/1.42 var(--titlu); color:var(--text); max-width:32em; text-wrap:pretty }
 
@@ -178,7 +183,7 @@ footer { display:flex; justify-content:space-between; gap:16px; padding:32px 0 4
 
 <header class="hero">
   <div class="intra">
-    <p class="unde">Bucătărie românească · București</p>
+    <p class="unde">Bucătărie românească · Herăstrău</p>
     <h1>La Senna</h1>
     <p class="slogan">Mâncare românească, gătită încet, ca acasă.</p>
     <div class="butoane"><a class="btn plin" href="tel:+40212333738"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>Sună: +40212333738</a><a class="btn text" href="#meniu">Vezi meniul <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a></div>
@@ -205,7 +210,8 @@ footer { display:flex; justify-content:space-between; gap:16px; padding:32px 0 4
 <section id="despre"><div class="wrap despre apare">
   <h2>Despre noi</h2>
   <div>
-    <p class="mare">La La Senna gătim după rețete de familie: ciorbe acrite cu borș, sarmale fierte la foc mic și pâine caldă. Porții mari, prețuri cinstite și o masă la care te simți ca acasă.</p>
+    <p class="mare">La La Senna gătim după rețete de familie: ciorbe acrite cu borș, sarmale fierte la foc mic și pâine caldă. Porții mari, prețuri cinstite și o masă la care te simți ca acasă. Ne găsești pe Strada Nicolae G. Caramfil, în zona Herăstrău.</p>
+    <div class="stiut"><h3>Bine de știut</h3><ul><li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Terasă</li></ul></div>
     <p class="nota">Text de exemplu. Pe site-ul final îl scriem împreună, cu povestea voastră.</p>
   </div>
 </div></section>

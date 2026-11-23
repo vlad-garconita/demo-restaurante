@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
 <title>Salad Box · Demo site</title>
-<meta name="description" content="Mâncare gătită în fiecare zi, pe Bulevardul General Paul Teodorescu.">
+<meta name="description" content="Salate proaspete și boluri sățioase, făcute pe loc.">
 <script>document.documentElement.classList.add('js')</script>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
@@ -91,6 +91,11 @@ h2 { font:var(--gt) clamp(36px,4.5vw,48px)/1.1 var(--titlu); letter-spacing:-.01
        }
 .nota { font-size:14px; color:var(--text3); margin-top:24px }
 
+.stiut { margin-top:40px }
+.stiut h3 { font-size:14px; font-weight:600; color:var(--accent); margin-bottom:12px }
+.stiut ul { display:flex; flex-wrap:wrap; gap:8px 24px }
+.stiut li { display:flex; align-items:center; gap:8px; color:var(--text2) }
+.stiut .ic { width:16px; height:16px; color:var(--accent) }
 .despre { display:grid; grid-template-columns:1fr 1.6fr; gap:64px }
 .despre p.mare { font:var(--gt) clamp(24px,2.6vw,31px)/1.42 var(--titlu); color:var(--text); max-width:32em; text-wrap:pretty }
 
@@ -178,9 +183,9 @@ footer { display:flex; justify-content:space-between; gap:16px; padding:32px 0 4
 
 <header class="hero">
   <div class="intra">
-    <p class="unde">Restaurant · București</p>
+    <p class="unde">Salate și boluri · Militari</p>
     <h1>Salad Box</h1>
-    <p class="slogan">Mâncare gătită în fiecare zi, pe Bulevardul General Paul Teodorescu.</p>
+    <p class="slogan">Salate proaspete și boluri sățioase, făcute pe loc.</p>
     <div class="butoane"><a class="btn plin" href="tel:+40772523269"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>Sună: +40 772 523 269</a><a class="btn text" href="#meniu">Vezi meniul <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a></div>
   </div>
   <div class="card-zona">
@@ -188,7 +193,7 @@ footer { display:flex; justify-content:space-between; gap:16px; padding:32px 0 4
       <div class="spate" aria-hidden="true"></div>
       <div class="card">
         <div class="sus"><b>Meniu</b><span>Salad Box</span></div>
-        <ul><li class="fel"><div class="rand"><span class="n">Supa zilei</span><span class="puncte" aria-hidden="true"></span><span class="pret">22</span></div></li><li class="fel"><div class="rand"><span class="n">Piept de pui la grătar</span><span class="puncte" aria-hidden="true"></span><span class="pret">42</span></div></li><li class="fel"><div class="rand"><span class="n">Clătite</span><span class="puncte" aria-hidden="true"></span><span class="pret">22</span></div></li><li class="fel"><div class="rand"><span class="n">Salată de vinete</span><span class="puncte" aria-hidden="true"></span><span class="pret">26</span></div></li><li class="fel"><div class="rand"><span class="n">Ceafă de porc</span><span class="puncte" aria-hidden="true"></span><span class="pret">48</span></div></li></ul>
+        <ul><li class="fel"><div class="rand"><span class="n">Caesar</span><span class="puncte" aria-hidden="true"></span><span class="pret">36</span></div></li><li class="fel"><div class="rand"><span class="n">Limonadă</span><span class="puncte" aria-hidden="true"></span><span class="pret">16</span></div></li><li class="fel"><div class="rand"><span class="n">Grecească</span><span class="puncte" aria-hidden="true"></span><span class="pret">32</span></div></li><li class="fel"><div class="rand"><span class="n">Smoothie</span><span class="puncte" aria-hidden="true"></span><span class="pret">19</span></div></li><li class="fel"><div class="rand"><span class="n">Bol cu quinoa</span><span class="puncte" aria-hidden="true"></span><span class="pret">38</span></div></li></ul>
         <p class="jos">Prețuri în lei</p>
         <svg class="stampila" viewBox="0 0 120 120" aria-hidden="true"><defs><path id="cerc" d="M60 60 m-41 0 a41 41 0 1 1 82 0 a41 41 0 1 1 -82 0"/></defs><circle cx="60" cy="60" r="56" fill="none" stroke="currentColor" stroke-width="2.5"/><circle cx="60" cy="60" r="31" fill="none" stroke="currentColor" stroke-width="1"/><text class="st-cerc"><textPath href="#cerc" textLength="250" lengthAdjust="spacing">SALAD BOX · BUCUREȘTI ·</textPath></text><text x="60" y="71" text-anchor="middle" class="st-mare">S</text></svg>
       </div>
@@ -205,7 +210,8 @@ footer { display:flex; justify-content:space-between; gap:16px; padding:32px 0 4
 <section id="despre"><div class="wrap despre apare">
   <h2>Despre noi</h2>
   <div>
-    <p class="mare">Salad Box te așteaptă cu preparate gătite proaspăt, ingrediente alese cu grijă și o atmosferă în care vrei să mai rămâi la un pahar.</p>
+    <p class="mare">Salad Box te așteaptă cu preparate gătite proaspăt, ingrediente alese cu grijă și o atmosferă în care vrei să mai rămâi la un pahar. Ne găsești pe Bulevardul General Paul Teodorescu, în zona Militari.</p>
+    <div class="stiut"><h3>Bine de știut</h3><ul><li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>La pachet</li><li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Plata cu cardul</li></ul></div>
     <p class="nota">Text de exemplu. Pe site-ul final îl scriem împreună, cu povestea voastră.</p>
   </div>
 </div></section>
@@ -214,7 +220,7 @@ footer { display:flex; justify-content:space-between; gap:16px; padding:32px 0 4
   <div class="pagina-meniu apare">
     <div class="pm-cap"><span class="orn"></span><h2>Meniu</h2><span class="orn"></span></div>
     <p class="pm-sub">Salad Box · prețuri în lei</p>
-    <div class="meniu"><div class="categorie"><h3>Pentru început</h3><ul><li class="fel"><div class="rand"><span class="n">Supa zilei</span><span class="puncte" aria-hidden="true"></span><span class="pret">22</span></div><span class="desc">se schimbă în fiecare zi</span></li><li class="fel"><div class="rand"><span class="n">Salată de vinete</span><span class="puncte" aria-hidden="true"></span><span class="pret">26</span></div><span class="desc">ceapă roșie, pâine prăjită</span></li></ul></div><div class="categorie"><h3>Feluri principale</h3><ul><li class="fel"><div class="rand"><span class="n">Piept de pui la grătar</span><span class="puncte" aria-hidden="true"></span><span class="pret">42</span></div><span class="desc">piure, salată</span></li><li class="fel"><div class="rand"><span class="n">Ceafă de porc</span><span class="puncte" aria-hidden="true"></span><span class="pret">48</span></div><span class="desc">cartofi țărănești, murături</span></li></ul></div><div class="categorie"><h3>Desert</h3><ul><li class="fel"><div class="rand"><span class="n">Clătite</span><span class="puncte" aria-hidden="true"></span><span class="pret">22</span></div><span class="desc">cu dulceață sau ciocolată</span></li></ul></div></div>
+    <div class="meniu"><div class="categorie"><h3>Salate</h3><ul><li class="fel"><div class="rand"><span class="n">Caesar</span><span class="puncte" aria-hidden="true"></span><span class="pret">36</span></div><span class="desc">pui la grătar, parmezan, crutoane</span></li><li class="fel"><div class="rand"><span class="n">Grecească</span><span class="puncte" aria-hidden="true"></span><span class="pret">32</span></div><span class="desc">roșii, castraveți, feta, măsline</span></li><li class="fel"><div class="rand"><span class="n">Bol cu quinoa</span><span class="puncte" aria-hidden="true"></span><span class="pret">38</span></div><span class="desc">avocado, năut, legume coapte</span></li></ul></div><div class="categorie"><h3>De băut</h3><ul><li class="fel"><div class="rand"><span class="n">Limonadă</span><span class="puncte" aria-hidden="true"></span><span class="pret">16</span></div><span class="desc">cu mentă</span></li><li class="fel"><div class="rand"><span class="n">Smoothie</span><span class="puncte" aria-hidden="true"></span><span class="pret">19</span></div><span class="desc">fructe de sezon</span></li></ul></div></div>
   </div>
   <p class="nota">Meniu de exemplu. Pe site-ul final apar preparatele și prețurile voastre, ușor de schimbat oricând.</p>
 </div></section>
