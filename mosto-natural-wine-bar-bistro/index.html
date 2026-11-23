@@ -5,16 +5,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
 <title>Mosto - Natural Wine Bar &amp; Bistró · Demo site</title>
-<meta name="description" content="Bere rece, cocktailuri bune și muzică până târziu.">
+<meta name="description" content="Vinuri naturale la pahar, brânzeturi bune și seri lungi.">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root {
-  --fundal:#161513; --suprafata:#1f1d1a; --text:#efe9de; --text2:#aaa398; --text3:#8a847a;
+  --fundal:#f5efe9; --suprafata:#ece3da; --text:#1f1b16; --text2:#5e554a; --text3:#7b7266;
   --linie:color-mix(in srgb, var(--text) 10%, transparent);
-  --accent:#d08c3c; --pe-accent:#16140f;
-  --titlu:'DM Serif Display', Georgia, serif; --corp:'DM Sans', system-ui, sans-serif; --gt:400;
-  --m-fundal:#262a24; --m-text:#ebe7da; --m-text2:#a9a99c; --m-linie:rgba(235,231,218,.28);
+  --accent:#7b1e3a; --pe-accent:#ffffff;
+  --titlu:'Libre Caslon Display', Georgia, serif; --corp:'Instrument Sans', system-ui, sans-serif; --gt:400;
+  --m-fundal:#fffdf8; --m-text:#2a2018; --m-text2:#6e6256; --m-linie:rgba(42,32,24,.22);
   --ease:cubic-bezier(.22,1,.36,1);
 }
 * { box-sizing:border-box; margin:0; padding:0 }
@@ -59,7 +59,7 @@ h1 { font:var(--gt) clamp(44px,6vw,80px)/1.04 var(--titlu); letter-spacing:-.02e
 /* meniul tipărit din hero */
 .card-zona { display:grid; place-items:center }
 .card { position:relative; width:min(100%, 420px); background:var(--m-fundal); color:var(--m-text);
-         border:12px solid #4a3324; border-radius:6px; box-shadow:inset 0 0 0 1px rgba(0,0,0,.4), 0 24px 48px -16px rgba(0,0,0,.6);
+         border:1px solid rgba(42,32,24,.08); border-radius:4px; box-shadow:0 1px 2px rgba(40,25,10,.08), 0 24px 48px -16px rgba(40,25,10,.28);
          padding:40px 36px 48px; transform:rotate(-1.5deg) }
 .card .sus { text-align:center; padding-bottom:20px; margin-bottom:20px; border-bottom:1px solid var(--m-linie) }
 .card .sus b { display:block; font:var(--gt) 30px/1.1 var(--titlu);  }
@@ -69,7 +69,7 @@ h1 { font:var(--gt) clamp(44px,6vw,80px)/1.04 var(--titlu); letter-spacing:-.02e
 .card .puncte { border-color:var(--m-linie) }
 .card .jos { margin-top:24px; font-size:13px; color:var(--m-text2) }
 .stampila { position:absolute; right:-20px; bottom:-28px; width:112px; height:112px; color:var(--accent);
-             transform:rotate(-14deg); opacity:.85;  }
+             transform:rotate(-14deg); opacity:.85; mix-blend-mode:multiply; }
 .st-cerc { font:600 10px var(--corp); fill:currentColor; letter-spacing:.08em }
 .st-mare { font:var(--gt) 34px var(--titlu); fill:currentColor }
 
@@ -110,7 +110,7 @@ h2 { font:var(--gt) clamp(36px,4.5vw,48px)/1.1 var(--titlu); letter-spacing:-.01
 .social a { color:var(--text2); text-underline-offset:3px }
 .social a:hover { color:var(--text) }
 iframe { display:block; width:100%; height:420px; border:1px solid var(--linie); border-radius:16px; background:var(--suprafata);
-          filter:invert(.9) hue-rotate(180deg) brightness(.95) }
+          filter:none }
 
 footer { display:flex; justify-content:space-between; gap:16px; padding:32px 0 48px; font-size:14px; color:var(--text3);
           border-top:1px solid var(--linie); flex-wrap:wrap }
@@ -153,14 +153,14 @@ footer { display:flex; justify-content:space-between; gap:16px; padding:32px 0 4
   <div class="intra">
     <p class="unde"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>Strada Nicolae Filipescu 61</p>
     <h1>Mosto - Natural Wine Bar &amp; Bistró</h1>
-    <p class="slogan">Bere rece, cocktailuri bune și muzică până târziu.</p>
+    <p class="slogan">Vinuri naturale la pahar, brânzeturi bune și seri lungi.</p>
     <p class="azi" hidden><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>Azi: <b></b></p>
     <div class="butoane"><a class="btn plin" href="tel:+40311066602"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>Sună: +40 31 106 6602</a><a class="btn text" href="#meniu">Vezi meniul <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a></div>
   </div>
   <div class="card-zona intra d2">
     <div class="card">
       <div class="sus"><b>Meniu</b><span>Mosto - Natural Wine Bar &amp; Bistró</span></div>
-      <ul><li class="fel"><div class="rand"><span class="n">Lager la draft</span><span class="puncte" aria-hidden="true"></span><span class="pret">16</span></div></li><li class="fel"><div class="rand"><span class="n">Negroni</span><span class="puncte" aria-hidden="true"></span><span class="pret">36</span></div></li><li class="fel"><div class="rand"><span class="n">Platou de brânzeturi</span><span class="puncte" aria-hidden="true"></span><span class="pret">58</span></div></li><li class="fel"><div class="rand"><span class="n">IPA</span><span class="puncte" aria-hidden="true"></span><span class="pret">22</span></div></li><li class="fel"><div class="rand"><span class="n">Aperol spritz</span><span class="puncte" aria-hidden="true"></span><span class="pret">32</span></div></li></ul>
+      <ul><li class="fel"><div class="rand"><span class="n">Fetească albă</span><span class="puncte" aria-hidden="true"></span><span class="pret">28</span></div></li><li class="fel"><div class="rand"><span class="n">Platou de brânzeturi</span><span class="puncte" aria-hidden="true"></span><span class="pret">62</span></div></li><li class="fel"><div class="rand"><span class="n">Tartă cu prune</span><span class="puncte" aria-hidden="true"></span><span class="pret">26</span></div></li><li class="fel"><div class="rand"><span class="n">Pinot noir</span><span class="puncte" aria-hidden="true"></span><span class="pret">32</span></div></li><li class="fel"><div class="rand"><span class="n">Paté de casă</span><span class="puncte" aria-hidden="true"></span><span class="pret">36</span></div></li></ul>
       <p class="jos">Prețuri în lei</p>
       <svg class="stampila" viewBox="0 0 120 120" aria-hidden="true"><defs><path id="cerc" d="M60 60 m-41 0 a41 41 0 1 1 82 0 a41 41 0 1 1 -82 0"/></defs><circle cx="60" cy="60" r="56" fill="none" stroke="currentColor" stroke-width="2.5"/><circle cx="60" cy="60" r="31" fill="none" stroke="currentColor" stroke-width="1"/><text class="st-cerc"><textPath href="#cerc" textLength="250" lengthAdjust="spacing">MOSTO - NATURAL WINE BA… · BUCUREȘTI ·</textPath></text><text x="60" y="71" text-anchor="middle" class="st-mare">M</text></svg>
     </div>
@@ -171,14 +171,14 @@ footer { display:flex; justify-content:space-between; gap:16px; padding:32px 0 4
 <section id="despre"><div class="wrap despre">
   <h2>Despre noi</h2>
   <div>
-    <p class="mare">Mosto - Natural Wine Bar &amp; Bistró e locul unde vii după muncă și rămâi mai mult decât ai plănuit. Bere la draft, cocktailuri făcute ca lumea și ceva bun de ronțăit lângă.</p>
+    <p class="mare">La Mosto - Natural Wine Bar &amp; Bistró vinurile vin de la producători mici, care lucrează cu mâna și lasă strugurii să vorbească. Le deschidem la pahar, ca să guști mai multe într-o seară, iar lângă ele punem ceva bun de mâncat.</p>
     <p class="nota">Text de exemplu. Pe site-ul final îl scriem împreună, cu povestea voastră.</p>
   </div>
 </div></section>
 
 <section id="meniu"><div class="wrap">
   <div class="meniu-cap"><h2>Meniu</h2><span>Prețuri în lei</span></div>
-  <div class="meniu"><div class="categorie"><h3>Bere</h3><ul><li class="fel"><div class="rand"><span class="n">Lager la draft</span><span class="puncte" aria-hidden="true"></span><span class="pret">16</span></div><span class="desc">0,5 l</span></li><li class="fel"><div class="rand"><span class="n">IPA</span><span class="puncte" aria-hidden="true"></span><span class="pret">22</span></div><span class="desc">0,33 l, berărie locală</span></li></ul></div><div class="categorie"><h3>Cocktailuri</h3><ul><li class="fel"><div class="rand"><span class="n">Negroni</span><span class="puncte" aria-hidden="true"></span><span class="pret">36</span></div><span class="desc">gin, vermut, Campari</span></li><li class="fel"><div class="rand"><span class="n">Aperol spritz</span><span class="puncte" aria-hidden="true"></span><span class="pret">32</span></div><span class="desc">prosecco, sifon, portocală</span></li></ul></div><div class="categorie"><h3>De ronțăit</h3><ul><li class="fel"><div class="rand"><span class="n">Platou de brânzeturi</span><span class="puncte" aria-hidden="true"></span><span class="pret">58</span></div><span class="desc">pentru 2, nuci, miere</span></li><li class="fel"><div class="rand"><span class="n">Nachos</span><span class="puncte" aria-hidden="true"></span><span class="pret">28</span></div><span class="desc">cheddar, jalapeño, salsa</span></li></ul></div></div>
+  <div class="meniu"><div class="categorie"><h3>La pahar</h3><ul><li class="fel"><div class="rand"><span class="n">Fetească albă</span><span class="puncte" aria-hidden="true"></span><span class="pret">28</span></div><span class="desc">orange, macerat pe coji</span></li><li class="fel"><div class="rand"><span class="n">Pinot noir</span><span class="puncte" aria-hidden="true"></span><span class="pret">32</span></div><span class="desc">roșu ușor, servit răcoros</span></li><li class="fel"><div class="rand"><span class="n">Pét-nat</span><span class="puncte" aria-hidden="true"></span><span class="pret">34</span></div><span class="desc">spumant natural, rosé</span></li></ul></div><div class="categorie"><h3>De mâncat</h3><ul><li class="fel"><div class="rand"><span class="n">Platou de brânzeturi</span><span class="puncte" aria-hidden="true"></span><span class="pret">62</span></div><span class="desc">pentru 2, miere, nuci</span></li><li class="fel"><div class="rand"><span class="n">Paté de casă</span><span class="puncte" aria-hidden="true"></span><span class="pret">36</span></div><span class="desc">pâine cu maia, murături</span></li></ul></div><div class="categorie"><h3>Dulce</h3><ul><li class="fel"><div class="rand"><span class="n">Tartă cu prune</span><span class="puncte" aria-hidden="true"></span><span class="pret">26</span></div><span class="desc">frișcă, scorțișoară</span></li></ul></div></div>
   <p class="nota">Meniu de exemplu. Pe site-ul final apar preparatele și prețurile voastre, ușor de schimbat oricând.</p>
 </div></section>
 
