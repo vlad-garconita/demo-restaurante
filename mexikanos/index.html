@@ -6,6 +6,7 @@
 <meta name="robots" content="noindex, nofollow">
 <title>Mexikanos · Demo site</title>
 <meta name="description" content="Tacos, burritos și salsa iute, făcute pe loc.">
+<script>document.documentElement.classList.add('js')</script>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
@@ -18,7 +19,7 @@
   --ease:cubic-bezier(.22,1,.36,1);
 }
 * { box-sizing:border-box; margin:0; padding:0 }
-html { scroll-behavior:smooth }
+html { scroll-behavior:smooth; overflow-x:clip }
 body { overflow-x:clip; background:var(--fundal); color:var(--text); font:400 16px/1.6 var(--corp); -webkit-font-smoothing:antialiased }
 a { color:inherit }
 ul { list-style:none }
@@ -36,16 +37,19 @@ nav ul a { text-decoration:none; color:var(--text2); transition:color .15s var(-
 nav ul a:hover { color:var(--text) }
 
 .hero { display:grid; grid-template-columns:1.05fr 1fr; gap:64px; align-items:center;
-         min-height:min(calc(100svh - 108px), 760px); padding:48px 0 96px }
-.unde { display:flex; align-items:center; gap:8px; color:var(--text2); font-size:15px }
-.unde .ic { color:var(--text3) }
+         min-height:min(calc(100svh - 220px), 680px); padding:48px 0 72px }
+.unde { color:var(--accent); font-size:15px; font-weight:500 }
 h1 { font:var(--gt) clamp(44px,6vw,80px)/1.04 var(--titlu); letter-spacing:-.02em; margin:20px 0 24px; text-wrap:balance;
        }
 .slogan { font-size:19px; line-height:30px; color:var(--text2); max-width:30ch }
-.azi { display:flex; align-items:center; gap:8px; margin-top:16px; font-size:15px; color:var(--text2) }
-.azi[hidden] { display:none }
-.azi .ic { color:var(--text3) }
-.azi b { font-weight:500; color:var(--text); font-variant-numeric:tabular-nums }
+/* banda cu informații de sub hero */
+.banda { display:grid; grid-template-columns:repeat(3,1fr); border-top:1px solid var(--linie); padding:24px 0 32px }
+.banda > div { padding:0 24px; border-left:1px solid var(--linie); min-width:0 }
+.banda > div:first-child { padding-left:0; border-left:0 }
+.banda .et { display:flex; align-items:center; gap:8px; font-size:13px; color:var(--text3); margin-bottom:6px }
+.banda .et .ic { width:16px; height:16px }
+.banda .val { font-size:17px; font-weight:500; text-decoration:none; font-variant-numeric:tabular-nums; display:block }
+.banda a.val:hover { text-decoration:underline; text-underline-offset:3px }
 .butoane { display:flex; gap:24px; align-items:center; margin-top:40px; flex-wrap:wrap }
 .btn { display:inline-flex; align-items:center; gap:10px; height:48px; font-weight:500; font-size:16px; text-decoration:none;
         border-radius:10px; transition:background-color .15s var(--ease), color .15s var(--ease), transform .12s var(--ease) }
@@ -58,9 +62,11 @@ h1 { font:var(--gt) clamp(44px,6vw,80px)/1.04 var(--titlu); letter-spacing:-.02e
 
 /* meniul tipărit din hero */
 .card-zona { display:grid; place-items:center }
-.card { position:relative; width:min(100%, 420px); background:var(--m-fundal); color:var(--m-text);
-         border:1px solid rgba(42,32,24,.08); border-radius:4px; box-shadow:0 1px 2px rgba(40,25,10,.08), 0 24px 48px -16px rgba(40,25,10,.28);
-         padding:40px 36px 48px; transform:rotate(-1.5deg) }
+.stiva { position:relative; width:min(100%, 420px) }
+.card, .spate, .pagina-meniu { background:var(--m-fundal); color:var(--m-text); border:1px solid rgba(42,32,24,.08);
+         border-radius:4px; box-shadow:0 1px 2px rgba(40,25,10,.08), 0 24px 48px -16px rgba(40,25,10,.28) }
+.spate { position:absolute; inset:0; transform:rotate(3.5deg) translate(12px,6px); filter:brightness(.94) }
+.card { position:relative; padding:40px 36px 48px; transform:rotate(-1.5deg) }
 .card .sus { text-align:center; padding-bottom:20px; margin-bottom:20px; border-bottom:1px solid var(--m-linie) }
 .card .sus b { display:block; font:var(--gt) 30px/1.1 var(--titlu);  }
 .card .sus span { display:block; margin-top:8px; font-size:13px; color:var(--m-text2) }
@@ -86,10 +92,17 @@ h2 { font:var(--gt) clamp(36px,4.5vw,48px)/1.1 var(--titlu); letter-spacing:-.01
 .nota { font-size:14px; color:var(--text3); margin-top:24px }
 
 .despre { display:grid; grid-template-columns:1fr 1.6fr; gap:64px }
-.despre p.mare { font-size:21px; line-height:34px; color:var(--text2); max-width:36em }
+.despre p.mare { font:var(--gt) clamp(24px,2.6vw,31px)/1.42 var(--titlu); color:var(--text); max-width:32em; text-wrap:pretty }
 
-.meniu-cap { display:flex; justify-content:space-between; align-items:baseline; gap:24px; margin-bottom:48px; flex-wrap:wrap }
-.meniu-cap span { color:var(--text3); font-size:14px }
+.pagina-meniu { padding:72px 64px 64px }
+.pm-cap { display:flex; align-items:center; justify-content:center; gap:24px }
+.pm-cap h2 { color:var(--m-text) }
+.orn { width:72px; height:1px; background:var(--m-linie); position:relative }
+.orn::after { content:""; position:absolute; top:-3px; width:7px; height:7px; background:var(--accent); transform:rotate(45deg) }
+.orn:first-child::after { right:0 }
+.pm-sub { text-align:center; font-size:14px; color:var(--m-text2); margin:12px 0 56px }
+.pagina-meniu .desc { color:var(--m-text2) }
+.pagina-meniu .puncte { border-color:var(--m-linie) }
 .meniu { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:48px 64px }
 .categorie h3 { font-size:14px; font-weight:600; color:var(--accent); margin-bottom:16px }
 .categorie ul { display:grid; gap:20px }
@@ -118,8 +131,17 @@ footer { display:flex; justify-content:space-between; gap:16px; padding:32px 0 4
 
 @media (prefers-reduced-motion:no-preference) {
   .intra { animation:intra .5s var(--ease) both }
-  .intra.d2 { animation-delay:.06s }
+  .intra.d3 { animation-delay:.12s }
   @keyframes intra { from { opacity:0; transform:translateY(8px) } }
+  /* meniul cade pe masă, apoi se apasă ștampila */
+  .spate { animation:intra .5s var(--ease) .1s both }
+  .card { animation:cade .8s var(--ease) .2s both }
+  @keyframes cade { from { opacity:0; transform:translateY(-28px) rotate(-7deg) scale(1.04) } }
+  .stampila { animation:apasa .4s var(--ease) .9s both }
+  @keyframes apasa { from { opacity:0; transform:rotate(-14deg) scale(1.6) } }
+  /* secțiunile apar ușor la scroll */
+  .js .apare { opacity:0; transform:translateY(16px); transition:opacity .6s var(--ease), transform .6s var(--ease) }
+  .js .apare.vazut { opacity:1; transform:none }
 }
 @media (max-width:860px) {
   .wrap { padding:0 16px }
@@ -129,10 +151,15 @@ footer { display:flex; justify-content:space-between; gap:16px; padding:32px 0 4
   .hero { min-height:0; padding:32px 0 80px }
   h1 { font-size:clamp(40px,11vw,52px);  }
   .card { padding:32px 24px 40px; transform:rotate(-1deg) }
+  .spate { transform:rotate(2.5deg) translate(6px,4px) }
+  .banda { grid-template-columns:1fr; gap:16px; padding:24px 0 }
+  .banda > div { padding:0; border-left:0 }
+  .pagina-meniu { padding:48px 20px 40px }
+  .orn { width:32px }
   .stampila { width:88px; height:88px; right:-8px; bottom:-24px }
   section { padding:64px 0 }
   .despre { gap:24px }
-  .despre p.mare { font-size:18px; line-height:30px }
+  .despre p.mare { font-size:21px }
   iframe { height:320px }
   .suna { display:flex; justify-content:center; position:fixed; bottom:16px; left:16px; right:16px; z-index:9;
            box-shadow:0 8px 24px rgba(0,0,0,.18) }
@@ -151,24 +178,31 @@ footer { display:flex; justify-content:space-between; gap:16px; padding:32px 0 4
 
 <header class="hero">
   <div class="intra">
-    <p class="unde"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>Strada Gabroveni 61</p>
+    <p class="unde">Bucătărie mexicană · București</p>
     <h1>Mexikanos</h1>
     <p class="slogan">Tacos, burritos și salsa iute, făcute pe loc.</p>
-    <p class="azi" hidden><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>Azi: <b></b></p>
     <div class="butoane"><a class="btn plin" href="tel:+40774023861"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>Sună: +40774023861</a><a class="btn text" href="#meniu">Vezi meniul <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a></div>
   </div>
-  <div class="card-zona intra d2">
-    <div class="card">
-      <div class="sus"><b>Meniu</b><span>Mexikanos</span></div>
-      <ul><li class="fel"><div class="rand"><span class="n">Al pastor</span><span class="puncte" aria-hidden="true"></span><span class="pret">16</span></div></li><li class="fel"><div class="rand"><span class="n">Burrito de pui</span><span class="puncte" aria-hidden="true"></span><span class="pret">42</span></div></li><li class="fel"><div class="rand"><span class="n">Nachos</span><span class="puncte" aria-hidden="true"></span><span class="pret">28</span></div></li><li class="fel"><div class="rand"><span class="n">Carnitas</span><span class="puncte" aria-hidden="true"></span><span class="pret">16</span></div></li><li class="fel"><div class="rand"><span class="n">Burrito de vită</span><span class="puncte" aria-hidden="true"></span><span class="pret">46</span></div></li></ul>
-      <p class="jos">Prețuri în lei</p>
-      <svg class="stampila" viewBox="0 0 120 120" aria-hidden="true"><defs><path id="cerc" d="M60 60 m-41 0 a41 41 0 1 1 82 0 a41 41 0 1 1 -82 0"/></defs><circle cx="60" cy="60" r="56" fill="none" stroke="currentColor" stroke-width="2.5"/><circle cx="60" cy="60" r="31" fill="none" stroke="currentColor" stroke-width="1"/><text class="st-cerc"><textPath href="#cerc" textLength="250" lengthAdjust="spacing">MEXIKANOS · BUCUREȘTI ·</textPath></text><text x="60" y="71" text-anchor="middle" class="st-mare">M</text></svg>
+  <div class="card-zona">
+    <div class="stiva">
+      <div class="spate" aria-hidden="true"></div>
+      <div class="card">
+        <div class="sus"><b>Meniu</b><span>Mexikanos</span></div>
+        <ul><li class="fel"><div class="rand"><span class="n">Al pastor</span><span class="puncte" aria-hidden="true"></span><span class="pret">16</span></div></li><li class="fel"><div class="rand"><span class="n">Burrito de pui</span><span class="puncte" aria-hidden="true"></span><span class="pret">42</span></div></li><li class="fel"><div class="rand"><span class="n">Nachos</span><span class="puncte" aria-hidden="true"></span><span class="pret">28</span></div></li><li class="fel"><div class="rand"><span class="n">Carnitas</span><span class="puncte" aria-hidden="true"></span><span class="pret">16</span></div></li><li class="fel"><div class="rand"><span class="n">Burrito de vită</span><span class="puncte" aria-hidden="true"></span><span class="pret">46</span></div></li></ul>
+        <p class="jos">Prețuri în lei</p>
+        <svg class="stampila" viewBox="0 0 120 120" aria-hidden="true"><defs><path id="cerc" d="M60 60 m-41 0 a41 41 0 1 1 82 0 a41 41 0 1 1 -82 0"/></defs><circle cx="60" cy="60" r="56" fill="none" stroke="currentColor" stroke-width="2.5"/><circle cx="60" cy="60" r="31" fill="none" stroke="currentColor" stroke-width="1"/><text class="st-cerc"><textPath href="#cerc" textLength="250" lengthAdjust="spacing">MEXIKANOS · BUCUREȘTI ·</textPath></text><text x="60" y="71" text-anchor="middle" class="st-mare">M</text></svg>
+      </div>
     </div>
   </div>
 </header>
+<div class="banda intra d3">
+  <div><span class="et"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>Azi</span><a class="val azi-ore" href="#vizita">Vezi programul</a></div>
+  <div><span class="et"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>Adresa</span><a class="val" href="https://www.google.com/maps/search/?api=1&query=Mexikanos+Strada+Gabroveni+61,+București">Strada Gabroveni 61</a></div>
+  <div><span class="et"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>Rezervări</span><a class="val" href="tel:+40774023861">+40774023861</a></div>
+</div>
 </div>
 
-<section id="despre"><div class="wrap despre">
+<section id="despre"><div class="wrap despre apare">
   <h2>Despre noi</h2>
   <div>
     <p class="mare">La Mexikanos tortillele se încălzesc pe plită, salsa se toacă de mână în fiecare dimineață, iar guacamole se face doar când îl comanzi. Picant cât vrei tu.</p>
@@ -177,12 +211,15 @@ footer { display:flex; justify-content:space-between; gap:16px; padding:32px 0 4
 </div></section>
 
 <section id="meniu"><div class="wrap">
-  <div class="meniu-cap"><h2>Meniu</h2><span>Prețuri în lei</span></div>
-  <div class="meniu"><div class="categorie"><h3>Tacos</h3><ul><li class="fel"><div class="rand"><span class="n">Al pastor</span><span class="puncte" aria-hidden="true"></span><span class="pret">16</span></div><span class="desc">porc marinat, ananas, coriandru</span></li><li class="fel"><div class="rand"><span class="n">Carnitas</span><span class="puncte" aria-hidden="true"></span><span class="pret">16</span></div><span class="desc">porc gătit încet, ceapă roșie murată</span></li></ul></div><div class="categorie"><h3>Burritos</h3><ul><li class="fel"><div class="rand"><span class="n">Burrito de pui</span><span class="puncte" aria-hidden="true"></span><span class="pret">42</span></div><span class="desc">orez, fasole neagră, cașcaval, salsa</span></li><li class="fel"><div class="rand"><span class="n">Burrito de vită</span><span class="puncte" aria-hidden="true"></span><span class="pret">46</span></div><span class="desc">chili, guacamole, smântână</span></li></ul></div><div class="categorie"><h3>Pe lângă</h3><ul><li class="fel"><div class="rand"><span class="n">Nachos</span><span class="puncte" aria-hidden="true"></span><span class="pret">28</span></div><span class="desc">guacamole, salsa, jalapeño</span></li></ul></div></div>
+  <div class="pagina-meniu apare">
+    <div class="pm-cap"><span class="orn"></span><h2>Meniu</h2><span class="orn"></span></div>
+    <p class="pm-sub">Mexikanos · prețuri în lei</p>
+    <div class="meniu"><div class="categorie"><h3>Tacos</h3><ul><li class="fel"><div class="rand"><span class="n">Al pastor</span><span class="puncte" aria-hidden="true"></span><span class="pret">16</span></div><span class="desc">porc marinat, ananas, coriandru</span></li><li class="fel"><div class="rand"><span class="n">Carnitas</span><span class="puncte" aria-hidden="true"></span><span class="pret">16</span></div><span class="desc">porc gătit încet, ceapă roșie murată</span></li></ul></div><div class="categorie"><h3>Burritos</h3><ul><li class="fel"><div class="rand"><span class="n">Burrito de pui</span><span class="puncte" aria-hidden="true"></span><span class="pret">42</span></div><span class="desc">orez, fasole neagră, cașcaval, salsa</span></li><li class="fel"><div class="rand"><span class="n">Burrito de vită</span><span class="puncte" aria-hidden="true"></span><span class="pret">46</span></div><span class="desc">chili, guacamole, smântână</span></li></ul></div><div class="categorie"><h3>Pe lângă</h3><ul><li class="fel"><div class="rand"><span class="n">Nachos</span><span class="puncte" aria-hidden="true"></span><span class="pret">28</span></div><span class="desc">guacamole, salsa, jalapeño</span></li></ul></div></div>
+  </div>
   <p class="nota">Meniu de exemplu. Pe site-ul final apar preparatele și prețurile voastre, ușor de schimbat oricând.</p>
 </div></section>
 
-<section id="vizita"><div class="wrap vizita" >
+<section id="vizita"><div class="wrap vizita apare" >
   <div>
     <h2>Vino la noi</h2>
     <ul class="program"><li data-zile="0"><span>Luni</span><span class="ore">Închis</span></li><li data-zile="1,2,3,4,5,6"><span>Marți – Duminică</span><span class="ore">12:00 – 22:00</span></li></ul>
@@ -204,10 +241,15 @@ footer { display:flex; justify-content:space-between; gap:16px; padding:32px 0 4
   document.querySelectorAll('.program li[data-zile]').forEach(function (li) {
     if (li.dataset.zile.split(',').indexOf(String(azi)) < 0) return;
     li.classList.add('azi-rand');
-    var p = document.querySelector('.azi');
-    p.querySelector('b').textContent = li.querySelector('.ore').textContent;
-    p.hidden = false;
+    document.querySelector('.azi-ore').textContent = li.querySelector('.ore').textContent;
   });
+  // secțiunile apar când ajungi la ele
+  var el = document.querySelectorAll('.apare');
+  if (!('IntersectionObserver' in window)) { el.forEach(function (x) { x.classList.add('vazut'); }); return; }
+  var io = new IntersectionObserver(function (intrari) {
+    intrari.forEach(function (i) { if (i.isIntersecting) { i.target.classList.add('vazut'); io.unobserve(i.target); } });
+  }, { threshold: 0.12 });
+  el.forEach(function (x) { io.observe(x); });
 })();
 </script>
 </body>
