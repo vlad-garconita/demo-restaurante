@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="ro">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Terasa Obor 2 · Demo site</title>
+<meta name="description" content="Burgeri suculenți, cartofi crocanți și bere rece.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --fundal:#161513; --suprafata:#1f1d1a; --text:#efe9de; --text2:#aaa398; --text3:#8a847a;
+  --linie:color-mix(in srgb, var(--text) 10%, transparent);
+  --accent:#e0a526; --pe-accent:#16140f;
+  --titlu:'Bebas Neue', Georgia, serif; --corp:'Instrument Sans', system-ui, sans-serif; --gt:400;
+  --m-fundal:#262a24; --m-text:#ebe7da; --m-text2:#a9a99c; --m-linie:rgba(235,231,218,.28);
+  --ease:cubic-bezier(.22,1,.36,1);
+}
+* { box-sizing:border-box; margin:0; padding:0 }
+html { scroll-behavior:smooth }
+body { overflow-x:clip; background:var(--fundal); color:var(--text); font:400 16px/1.6 var(--corp); -webkit-font-smoothing:antialiased }
+a { color:inherit }
+ul { list-style:none }
+.ic { width:18px; height:18px; flex:none }
+.wrap { max-width:1120px; margin:0 auto; padding:0 24px }
+:focus-visible { outline:2px solid var(--accent); outline-offset:3px; border-radius:4px }
+
+.demo { background:var(--text); color:var(--fundal); font-size:13px; line-height:20px; padding:8px 16px; text-align:center }
+.demo a { text-decoration:underline; text-underline-offset:2px }
+
+nav { display:flex; justify-content:space-between; align-items:center; height:72px }
+.logo { font:var(--gt) 22px/1 var(--titlu); text-decoration:none; text-transform:uppercase; letter-spacing:.02em; font-size:26px; }
+nav ul { display:flex; gap:32px; font-size:15px }
+nav ul a { text-decoration:none; color:var(--text2); transition:color .15s var(--ease) }
+nav ul a:hover { color:var(--text) }
+
+.hero { display:grid; grid-template-columns:1.05fr 1fr; gap:64px; align-items:center;
+         min-height:min(calc(100svh - 108px), 760px); padding:48px 0 96px }
+.unde { display:flex; align-items:center; gap:8px; color:var(--text2); font-size:15px }
+.unde .ic { color:var(--text3) }
+h1 { font:var(--gt) clamp(44px,6vw,80px)/1.04 var(--titlu); letter-spacing:-.02em; margin:20px 0 24px; text-wrap:balance;
+      text-transform:uppercase; letter-spacing:.005em; font-size:clamp(56px,8vw,112px); line-height:.92; }
+.slogan { font-size:19px; line-height:30px; color:var(--text2); max-width:30ch }
+.azi { display:flex; align-items:center; gap:8px; margin-top:16px; font-size:15px; color:var(--text2) }
+.azi[hidden] { display:none }
+.azi .ic { color:var(--text3) }
+.azi b { font-weight:500; color:var(--text); font-variant-numeric:tabular-nums }
+.butoane { display:flex; gap:24px; align-items:center; margin-top:40px; flex-wrap:wrap }
+.btn { display:inline-flex; align-items:center; gap:10px; height:48px; font-weight:500; font-size:16px; text-decoration:none;
+        border-radius:10px; transition:background-color .15s var(--ease), color .15s var(--ease), transform .12s var(--ease) }
+.btn.plin { background:var(--accent); color:var(--pe-accent); padding:0 20px; font-variant-numeric:tabular-nums }
+.btn.plin:hover { background:color-mix(in srgb, var(--accent) 88%, var(--text)) }
+.btn:active { transform:scale(.98) }
+.btn.text { color:var(--text) }
+.btn.text .ic { transition:transform .15s var(--ease) }
+.btn.text:hover .ic { transform:translateX(3px) }
+
+/* meniul tipărit din hero */
+.card-zona { display:grid; place-items:center }
+.card { position:relative; width:min(100%, 420px); background:var(--m-fundal); color:var(--m-text);
+         border:12px solid #4a3324; border-radius:6px; box-shadow:inset 0 0 0 1px rgba(0,0,0,.4), 0 24px 48px -16px rgba(0,0,0,.6);
+         padding:40px 36px 48px; transform:rotate(-1.5deg) }
+.card .sus { text-align:center; padding-bottom:20px; margin-bottom:20px; border-bottom:1px solid var(--m-linie) }
+.card .sus b { display:block; font:var(--gt) 30px/1.1 var(--titlu); text-transform:uppercase; font-size:36px; }
+.card .sus span { display:block; margin-top:8px; font-size:13px; color:var(--m-text2) }
+.card ul { display:grid; gap:14px }
+.card .fel .n { font-size:16px }
+.card .puncte { border-color:var(--m-linie) }
+.card .jos { margin-top:24px; font-size:13px; color:var(--m-text2) }
+.stampila { position:absolute; right:-20px; bottom:-28px; width:112px; height:112px; color:var(--accent);
+             transform:rotate(-14deg); opacity:.85;  }
+.st-cerc { font:600 10px var(--corp); fill:currentColor; letter-spacing:.08em }
+.st-mare { font:var(--gt) 34px var(--titlu); fill:currentColor }
+
+/* rând de meniu: nume ..... preț */
+.fel .rand { display:flex; align-items:baseline; gap:8px }
+.fel .n { font-weight:500 }
+.puncte { flex:1; min-width:24px; border-bottom:2px dotted var(--linie); transform:translateY(-4px) }
+.pret { font-variant-numeric:tabular-nums; white-space:nowrap }
+.desc { display:block; font-size:14px; line-height:20px; color:var(--text3); margin-top:2px }
+
+section { padding:96px 0; border-top:1px solid var(--linie) }
+h2 { font:var(--gt) clamp(36px,4.5vw,48px)/1.1 var(--titlu); letter-spacing:-.01em;
+      text-transform:uppercase; letter-spacing:.01em; font-size:clamp(44px,5.5vw,64px); }
+.nota { font-size:14px; color:var(--text3); margin-top:24px }
+
+.despre { display:grid; grid-template-columns:1fr 1.6fr; gap:64px }
+.despre p.mare { font-size:21px; line-height:34px; color:var(--text2); max-width:36em }
+
+.meniu-cap { display:flex; justify-content:space-between; align-items:baseline; gap:24px; margin-bottom:48px; flex-wrap:wrap }
+.meniu-cap span { color:var(--text3); font-size:14px }
+.meniu { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:48px 64px }
+.categorie h3 { font-size:14px; font-weight:600; color:var(--accent); margin-bottom:16px }
+.categorie ul { display:grid; gap:20px }
+.categorie .pret { font-weight:500 }
+
+.vizita { display:grid; grid-template-columns:1fr 1.2fr; gap:64px; align-items:start }
+.vizita h2 { margin-bottom:32px }
+.program li { display:flex; justify-content:space-between; gap:16px; padding:12px 0; border-bottom:1px solid var(--linie); color:var(--text2) }
+.program .ore { font-variant-numeric:tabular-nums }
+.program li.azi-rand { color:var(--text); font-weight:500 }
+.program li.azi-rand span:first-child::after { content:"azi"; margin-left:8px; font-size:12px; font-weight:500;
+   color:var(--accent); vertical-align:1px }
+.contact { display:grid; gap:12px; margin-top:32px }
+.contact a { display:flex; align-items:center; gap:10px; text-decoration:none; width:fit-content }
+.contact a:hover { text-decoration:underline; text-underline-offset:3px }
+.contact .ic { color:var(--text3) }
+.social { display:flex; gap:24px; margin-top:24px; font-size:15px }
+.social a { color:var(--text2); text-underline-offset:3px }
+.social a:hover { color:var(--text) }
+iframe { display:block; width:100%; height:420px; border:1px solid var(--linie); border-radius:16px; background:var(--suprafata);
+          filter:invert(.9) hue-rotate(180deg) brightness(.95) }
+
+footer { display:flex; justify-content:space-between; gap:16px; padding:32px 0 48px; font-size:14px; color:var(--text3);
+          border-top:1px solid var(--linie); flex-wrap:wrap }
+.suna { display:none }
+
+@media (prefers-reduced-motion:no-preference) {
+  .intra { animation:intra .5s var(--ease) both }
+  .intra.d2 { animation-delay:.06s }
+  @keyframes intra { from { opacity:0; transform:translateY(8px) } }
+}
+@media (max-width:860px) {
+  .wrap { padding:0 16px }
+  nav { height:64px }
+  nav ul { display:none }
+  .hero, .despre, .vizita { grid-template-columns:1fr; gap:48px }
+  .hero { min-height:0; padding:32px 0 80px }
+  h1 { font-size:clamp(40px,11vw,52px); font-size:clamp(52px,15vw,72px); }
+  .card { padding:32px 24px 40px; transform:rotate(-1deg) }
+  .stampila { width:88px; height:88px; right:-8px; bottom:-24px }
+  section { padding:64px 0 }
+  .despre { gap:24px }
+  .despre p.mare { font-size:18px; line-height:30px }
+  iframe { height:320px }
+  .suna { display:flex; justify-content:center; position:fixed; bottom:16px; left:16px; right:16px; z-index:9;
+           box-shadow:0 8px 24px rgba(0,0,0,.18) }
+  footer { padding-bottom:104px; flex-direction:column; gap:4px }
+}
+</style>
+</head>
+<body>
+<div class="demo">Demo: propunere de site pentru Terasa Obor 2, realizată de Garconița Vlad. Nu este site-ul oficial · <a href="mailto:garconitav@gmail.com">garconitav@gmail.com</a></div>
+
+<div class="wrap">
+<nav>
+  <a class="logo" href="#">Terasa Obor 2</a>
+  <ul><li><a href="#despre">Despre</a></li><li><a href="#meniu">Meniu</a></li><li><a href="#vizita">Program și adresă</a></li></ul>
+</nav>
+
+<header class="hero">
+  <div class="intra">
+    <p class="unde"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>Strada Ziduri Moși 4</p>
+    <h1>Terasa Obor 2</h1>
+    <p class="slogan">Burgeri suculenți, cartofi crocanți și bere rece.</p>
+    <p class="azi" hidden><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>Azi: <b></b></p>
+    <div class="butoane"><a class="btn plin" href="tel:+40722456383"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>Sună: +40722456383</a><a class="btn text" href="#meniu">Vezi meniul <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a></div>
+  </div>
+  <div class="card-zona intra d2">
+    <div class="card">
+      <div class="sus"><b>Meniu</b><span>Terasa Obor 2</span></div>
+      <ul><li class="fel"><div class="rand"><span class="n">Classic</span><span class="puncte" aria-hidden="true"></span><span class="pret">42</span></div></li><li class="fel"><div class="rand"><span class="n">Cartofi prăjiți</span><span class="puncte" aria-hidden="true"></span><span class="pret">16</span></div></li><li class="fel"><div class="rand"><span class="n">Bere la halbă</span><span class="puncte" aria-hidden="true"></span><span class="pret">15</span></div></li><li class="fel"><div class="rand"><span class="n">Smoky BBQ</span><span class="puncte" aria-hidden="true"></span><span class="pret">48</span></div></li><li class="fel"><div class="rand"><span class="n">Onion rings</span><span class="puncte" aria-hidden="true"></span><span class="pret">18</span></div></li></ul>
+      <p class="jos">Prețuri în lei</p>
+      <svg class="stampila" viewBox="0 0 120 120" aria-hidden="true"><defs><path id="cerc" d="M60 60 m-41 0 a41 41 0 1 1 82 0 a41 41 0 1 1 -82 0"/></defs><circle cx="60" cy="60" r="56" fill="none" stroke="currentColor" stroke-width="2.5"/><circle cx="60" cy="60" r="31" fill="none" stroke="currentColor" stroke-width="1"/><text class="st-cerc"><textPath href="#cerc" textLength="250" lengthAdjust="spacing">TERASA OBOR 2 · BUCUREȘTI ·</textPath></text><text x="60" y="71" text-anchor="middle" class="st-mare">T</text></svg>
+    </div>
+  </div>
+</header>
+</div>
+
+<section id="despre"><div class="wrap despre">
+  <h2>Despre noi</h2>
+  <div>
+    <p class="mare">La Terasa Obor 2 carnea e tocată în fiecare zi, chiflele sunt proaspete, iar cartofii se prăjesc de două ori. Simplu, gustos și fără grabă.</p>
+    <p class="nota">Text de exemplu. Pe site-ul final îl scriem împreună, cu povestea voastră.</p>
+  </div>
+</div></section>
+
+<section id="meniu"><div class="wrap">
+  <div class="meniu-cap"><h2>Meniu</h2><span>Prețuri în lei</span></div>
+  <div class="meniu"><div class="categorie"><h3>Burgeri</h3><ul><li class="fel"><div class="rand"><span class="n">Classic</span><span class="puncte" aria-hidden="true"></span><span class="pret">42</span></div><span class="desc">vită 180g, cheddar, castraveți murați</span></li><li class="fel"><div class="rand"><span class="n">Smoky BBQ</span><span class="puncte" aria-hidden="true"></span><span class="pret">48</span></div><span class="desc">bacon, ceapă caramelizată, sos BBQ</span></li></ul></div><div class="categorie"><h3>Pe lângă</h3><ul><li class="fel"><div class="rand"><span class="n">Cartofi prăjiți</span><span class="puncte" aria-hidden="true"></span><span class="pret">16</span></div><span class="desc">sare de mare, rozmarin</span></li><li class="fel"><div class="rand"><span class="n">Onion rings</span><span class="puncte" aria-hidden="true"></span><span class="pret">18</span></div><span class="desc">sos de maioneză cu usturoi</span></li></ul></div><div class="categorie"><h3>De băut</h3><ul><li class="fel"><div class="rand"><span class="n">Bere la halbă</span><span class="puncte" aria-hidden="true"></span><span class="pret">15</span></div><span class="desc">0,5 l</span></li></ul></div></div>
+  <p class="nota">Meniu de exemplu. Pe site-ul final apar preparatele și prețurile voastre, ușor de schimbat oricând.</p>
+</div></section>
+
+<section id="vizita"><div class="wrap vizita" >
+  <div>
+    <h2>Vino la noi</h2>
+    <ul class="program"><li data-zile="0,1,2,3,4,5,6"><span>Zilnic</span><span class="ore">09:00 – 18:00</span></li></ul>
+    <div class="contact">
+      <a href="https://www.google.com/maps/search/?api=1&query=Terasa+Obor+2+Strada+Ziduri+Moși+4,+București"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>Strada Ziduri Moși 4, București</a>
+      <a href="tel:+40722456383"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>+40722456383</a>
+    </div>
+    
+  </div>
+  <div><iframe title="Hartă cu Terasa Obor 2" loading="lazy" src="https://www.openstreetmap.org/export/embed.html?bbox=26.1243852%2C44.449713700000004%2C26.1323852%2C44.4547137&amp;layer=mapnik&amp;marker=44.4522137%2C26.1283852"></iframe></div>
+</div></section>
+
+<div class="wrap"><footer><span>© Terasa Obor 2</span><span>Strada Ziduri Moși 4, București</span></footer></div>
+<a class="btn plin suna" href="tel:+40722456383"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>Sună acum</a>
+<script>
+// Rândul de azi din program: îl evidențiem și îl arătăm și sus, lângă titlu
+(function () {
+  var azi = (new Date().getDay() + 6) % 7;
+  document.querySelectorAll('.program li[data-zile]').forEach(function (li) {
+    if (li.dataset.zile.split(',').indexOf(String(azi)) < 0) return;
+    li.classList.add('azi-rand');
+    var p = document.querySelector('.azi');
+    p.querySelector('b').textContent = li.querySelector('.ore').textContent;
+    p.hidden = false;
+  });
+})();
+</script>
+</body>
+</html>
